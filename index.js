@@ -9,5 +9,8 @@ app.get('/', (rec, res) => {
 });
 
 
+//dynamically decide what port we are listening to (i.e. look at the underlying environment to determine the port - heroku determines this || we use 5000 (<-development))
+const PORT = process.env.PORT ||5000 
+
 //express is telling node to look for any traffic coming from this route.
 app.listen(5000);
